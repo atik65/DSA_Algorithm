@@ -37,7 +37,7 @@ int main()
     int arr[] = {10, 12, 15};
 
     int index = binary_search(arr, 3, 12);
-    printf("%d", index);
+    printf("%d\n", index);
 
     return 0;
 }
