@@ -1,7 +1,7 @@
 class Stack {
-  constructor(top) {
+  constructor() {
     this.data = [];
-    this.top = top;
+    this.top = 0;
   }
 
   push(item) {
@@ -22,7 +22,7 @@ class Stack {
 }
 
 let newStack = new Stack();
-newStack.top = 0;
+
 newStack.push(10);
 newStack.push(20);
 newStack.push(30);
