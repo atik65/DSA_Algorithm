@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define STACK_MAX 10
+#define STACK_MAX 5
 
 typedef struct
 {
@@ -49,18 +49,10 @@ int main()
     push(&newStack, 30);
     push(&newStack, 40);
     push(&newStack, 50);
-    push(&newStack, 60);
-    push(&newStack, 70);
-    push(&newStack, 80);
-    push(&newStack, 90);
-    push(&newStack, 100);
+    // push(&newStack, 50);
 
     pop(&newStack);
 
-    for (i = 0; i < newStack.top; i++)
-    {
-        printf("%d\t", newStack.data[i]);
-    }
-
+    printf("%d\n", newStack.top);
     return 0;
 }
