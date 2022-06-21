@@ -56,7 +56,7 @@ Node *create_tree()
     add_node_to_right(seven, six);
     add_node_to_left(six, five);
     add_node_to_right(six, ten);
-    add_node_to_left(nine, eight);
+    add_node_to_right(nine, eight);
     add_node_to_left(eight, three);
     add_node_to_right(eight, four);
 
@@ -92,6 +92,20 @@ void post_order_traversal(Node *root)
     printf("%d ", root->data);
 }
 
+void in_order_traversal(Node *root)
+{
+    if (root->left != NULL)
+    {
+        in_order_traversal(root->left);
+    }
+    printf("%d  ", root->data);
+
+    if (root->right != NULL)
+    {
+        in_order_traversal(root->right);
+    }
+}
+
 int main()
 {
     Node *root = create_tree();
@@ -99,6 +113,9 @@ int main()
     pre_order_traversal(root);
     printf("\n");
     post_order_traversal(root);
+    printf("\n");
+    in_order_traversal(root);
+    printf("\n");
 
     return 0;
 }
